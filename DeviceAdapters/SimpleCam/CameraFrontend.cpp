@@ -1555,7 +1555,8 @@ int CCameraFrontend::LoadImage(string imageFilename)
    if (bitDepth_ == 8)
       flags = RAW_DISPLAY | RAW_HALFSIZE; /* 24bpp, gamma 2.2 */
    else
-      flags = RAW_DEFAULT | RAW_HALFSIZE; /* 48bpp, linear gamma, no color interpolation */
+//      flags = RAW_DEFAULT | RAW_HALFSIZE; /* 48bpp, linear gamma, no color interpolation
+      flags = RAW_DEFAULT; /* 48bpp, linear gamma, no color interpolation //John */
 
    bool rc = frameBitmap.load(imageFilename.c_str(), flags); // Load image from disk
    
