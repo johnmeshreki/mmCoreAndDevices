@@ -751,8 +751,8 @@ string CSimpleCam::captureImage()
 
    // Download image from camera to imageFilename
    if (rc >= GP_OK)
-//      rc = gp_camera_file_get(camera_, camera_file_path.folder, camera_file_path.name, GP_FILE_TYPE_NORMAL, camera_file, context_);
-      rc = gp_camera_file_get(camera_, camera_file_path.folder, camera_file_path.name, GP_FILE_TYPE_RAW, camera_file, context_); //John
+      rc = gp_camera_file_get(camera_, camera_file_path.folder, camera_file_path.name, GP_FILE_TYPE_NORMAL, camera_file, context_);
+//      rc = gp_camera_file_get(camera_, camera_file_path.folder, camera_file_path.name, GP_FILE_TYPE_RAW, camera_file, context_); //John - this causes problems with releasing shutter!
 
    // Delete image on camera
    if (rc >= GP_OK)
